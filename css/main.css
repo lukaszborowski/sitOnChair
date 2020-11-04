@@ -1,15 +1,255 @@
 * {
   margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .main-container {
-  width: 100%;
+  width: 80%;
 }
 
 .navigation-row {
   background-color: black;
   width: 100%;
-  height: 10%;
+  height: 3.5rem;
+  padding: 0.4rem;
+}
+
+.navigation-row .navigation-logo {
+  display: inline-block;
+  margin-left: 5%;
+  margin-right: 33%;
+  width: 25%;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.navigation-row .navigation-logo h1 {
+  font-size: 2rem;
+}
+
+.navigation-row .navigation-logo span {
+  color: #06c787;
+}
+
+.navigation-container {
+  display: inline-block;
+  margin-right: 5%;
+}
+
+.popup-text {
+  visibility: hidden;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 76.5%;
+  left: 65.6%;
+  margin-left: -80px;
+  width: 9%;
+}
+
+.popup-text:after {
+  content: "";
+  position: absolute;
+  top: -25%;
+  left: 42%;
+  margin-left: -5px;
+  border-width: 20px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navigation-button {
+  border: 0;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 32%;
+  text-align: center;
+  color: #ffffff;
+  background-color: black;
+  cursor: pointer;
+}
+
+.navigation-button:hover {
+  color: #06c787;
+}
+
+.menu-item {
+  padding: 0.2rem;
+  color: #ffffff;
+  display: block;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  color: #06c787;
+  text-decoration: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height: 30rem;
+  background: #efeff2;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(51%, #efeff2), color-stop(94%, rgba(169, 170, 172, 0.779149)), to(rgba(99, 100, 101, 0.753939)));
+  background: linear-gradient(180deg, #efeff2 51%, rgba(169, 170, 172, 0.779149) 94%, rgba(99, 100, 101, 0.753939) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efeff2",endColorstr="#636465",GradientType=1);
+  width: 100%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #06c787;
+  font-weight: bold;
+  font-size: 2.5rem;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #06c787;
+}
+
+/* The dots/bullets/indicators */
+.active {
+  background-color: #06c787;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mySlides-image {
+  height: 100%;
+  width: 50%;
+  margin-left: 1%;
+  margin-top: -20%;
+}
+
+.mySlides-text {
+  height: 100%;
+  max-width: 39%;
+  display: inline-block;
+  text-align: center;
+  margin-right: 5%;
+}
+
+.mySlides-text h2 {
+  margin-top: 17%;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.mySlides-text span {
+  color: #06c787;
+}
+
+.mySlides-text p {
+  display: inline-block;
+  font-size: 1.3rem;
+  margin-bottom: 5%;
+}
+
+.mySlides-text a {
+  padding: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  height: 8%;
+  width: 20%;
+  color: #ffffff;
+  background-color: #06c787;
+  border-radius: 10px;
+  font-size: 2rem;
+}
+
+.mySlides-text a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.mySlides-text a:visited {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */
