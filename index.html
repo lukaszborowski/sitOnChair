@@ -11,6 +11,14 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
 </head>
 <body>
@@ -23,29 +31,36 @@
                 </h1>
             </div>
             <div class="navigation-container">
-                <button class="navigation-button about-company">o firmie</button>
-                <button class="navigation-button gallery">galeria</button>
-                <button class="navigation-button contact">kontakt</button>
-                <div class="popup-text">
-                    <a class="menu-item" href="#">Aktualności</a>
-                    <a class="menu-item" href="#">Nasz team</a>
-                    <a class="menu-item" href="#">Historia</a>
 
+                <div class="btn-group btn-group-lg" role="group" aria-label="Button group with nested dropdown">
+
+                    <div class="btn-group btn-group-lg" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            o firmie
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <a class="dropdown-item" href="#">aktualności</a>
+                            <a class="dropdown-item" href="#">nasz team</a>
+                            <a class="dropdown-item" href="#">historia</a>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary">galeria</button>
+                    <button type="button" class="btn btn-secondary">kontakt</button>
                 </div>
-
             </div>
         </div>
     </nav>
     <section class="slider">
-
         <div class="slideshow-container">
-
-
             <div class="mySlides">
                 <img class="mySlides-image" src="images/black_chair.png">
                 <div class="mySlides-text">
                     <h2>sit <span>on</span> our <span>chair</span></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id. Feugiat vivamus at augue eget arcu dictum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Leo a diam sollicitudin tempor id. Feugiat vivamus at augue eget arcu
+                        dictum.</p>
                     <a href="#">Zobacz wiecej</a>
                 </div>
             </div>
@@ -57,8 +72,6 @@
             <div class="mySlides">
 
             </div>
-
-            <!-- Next and previous buttons -->
             <a class="prev">&#10094;</a>
             <a class="next">&#10095;</a>
         </div>
@@ -68,8 +81,102 @@
     </section>
     <section class="products">
 
+        <div class="products-container">
+            <div class="products-item">
+                <div class="product-info">
+                    <h4>Chair CLAIR</h4>
+                    <div></div>
+                </div>
+            </div>
+            <div class="products-item">
+                <div class="product-info">
+                    <h4>Chair MARGARITA</h4>
+                    <div></div>
+                </div>
+            </div>
+            <div class="products-text">
+                <div class="product-info">
+                    <h4>Lorem Ipsum</h4>
+                    <div></div>
+                    <p>
+                        Tootsie roll pastry halvah pudding dragée soufflé. Gummi bears ice cream macaroon cake brownie
+                        marshmallow. Marzipan muffin gummies lollipop topping ice cream chocolate dessert gummi bears.
+                    </p>
+                    <p>
+                        Soufflé dragée gummi bears toffee cake chocolate cake ice cream cake croissant.
+                    </p>
+                </div>
+            </div>
+        </div>
+
     </section>
     <section class="prices">
+
+        <h3>cennik</h3>
+        <div class="underline-bar"></div>
+        <div class="plans-container">
+            <div class="basic-plan plan">
+                <div class="outer-circle">
+                    <div class="inner-circle">
+                    </div>
+                </div>
+                <div class="plan-info">
+                    <h4>basic plan</h4>
+                    <div class="price-circle">
+                        <p>85<sup>99</sup></p>
+                        <p>pln&#47;msc</p>
+                    </div>
+                    <div class="plan-details">
+                        <p>Zakup towaru - dowóz</p>
+                        <p>Serwis</p>
+                        <p>Gwarancja 5 lat</p>
+                        <p>Porady projektanta</p>
+                    </div>
+                    <a class="plan-join" href="#">dołącz</a>
+                </div>
+            </div>
+            <div class="standard-plan plan">
+                <div class="outer-circle">
+                    <div class="inner-circle">
+                    </div>
+                </div>
+                <div class="plan-info">
+                    <h4>basic plan</h4>
+                    <div class="price-circle">
+                        <p>85<sup>99</sup></p>
+                        <p>pln&#47;msc</p>
+                    </div>
+                    <div class="plan-details">
+                        <p>Zakup towaru - dowóz</p>
+                        <p>Serwis</p>
+                        <p>Gwarancja 5 lat</p>
+                        <p>Porady projektanta</p>
+                    </div>
+                    <a class="plan-join" href="#">dołącz</a>
+                </div>
+            </div>
+            <div class="advance-plan plan">
+                <div class="outer-circle">
+                    <div class="inner-circle">
+                    </div>
+                </div>
+                <div class="plan-info">
+                    <h4>basic plan</h4>
+                    <div class="price-circle">
+                        <p>85<sup>99</sup></p>
+                        <p>pln&#47;msc</p>
+
+                    </div>
+                    <div class="plan-details">
+                        <p>Zakup towaru - dowóz</p>
+                        <p>Serwis</p>
+                        <p>Gwarancja 5 lat</p>
+                        <p>Porady projektanta</p>
+                    </div>
+                    <a class="plan-join" href="#">dołącz</a>
+                </div>
+            </div>
+        </div>
 
     </section>
     <section class="contact">

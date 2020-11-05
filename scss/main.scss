@@ -1,6 +1,12 @@
 $colorMain: #06c787;
 $colorWhite: #ffffff;
+$colorWhiteOp: rgba(255, 255, 255, 0.3);
+$colorWhiteOpper: rgba(255, 255, 255, 0.5);
 $colorBlack: black;
+$lightGrey: rgb(230, 230, 230);
+$colorGrey: rgb(217, 217, 217);
+$greyText: rgb(102, 102, 102);
+
 
 * {
   margin: 0 auto;
@@ -16,111 +22,48 @@ $colorBlack: black;
 .navigation-row {
   background-color: $colorBlack;
   width: 100%;
-  height: 3.5rem;
+  height: 4rem;
   padding: 0.4rem;
 
   .navigation-logo {
     display: inline-block;
     margin-left: 5%;
-    margin-right: 33%;
+    margin-right: 30%;
     width: 25%;
     text-transform: uppercase;
     font-size: 2rem;
     color: $colorWhite;
+
     h1 {
       font-size: 2rem;
     }
+
     span {
       color: $colorMain;
     }
   }
+
 }
 
 .navigation-container {
   display: inline-block;
   margin-right: 5%;
+  margin-bottom: 1rem;
 }
 
-.popup-text {
-  visibility: hidden;
-  background-color: $colorBlack;
-  color: $colorWhite;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 76.5%;
-  left: 65.6%;
-  margin-left: -80px;
-  width: 9%;
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: -25%;
-    left: 42%;
-    margin-left: -5px;
-    border-width: 20px;
-    border-style: solid;
-    border-color: transparent transparent $colorBlack transparent;
-  }
-
-}
-
-.show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
-}
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.navigation-button {
-  border: 0;
+.btn {
   text-transform: uppercase;
-  font-size: 1.5rem;
-  height: 3rem;
-  width: 32%;
-  text-align: center;
-  color: $colorWhite;
-  background-color: $colorBlack;
-  cursor: pointer;
 
   &:hover {
-    color: $colorMain;
+    color: $colorMain !important;
   }
+
 }
 
-.menu-item {
-  padding: 0.2rem;
-  color: $colorWhite;
-  display: block;
-  font-size: 1.2rem;
-  text-align: center;
-  text-decoration: none;
-
-  &:hover {
-    color: $colorMain;
-    text-decoration: none;
-  }
+.dropdown-item {
+  text-transform: capitalize;
 }
+
 
 // Slider
 
@@ -136,13 +79,12 @@ $colorBlack: black;
 .mySlides {
   display: none;
   height: 30rem;
-  background: rgb(239,239,242);
-  background: -moz-linear-gradient(180deg, rgba(239,239,242,1) 51%, rgba(169,170,172,0.7791491596638656) 94%, rgba(99,100,101,0.7539390756302521) 100%);
-  background: -webkit-linear-gradient(180deg, rgba(239,239,242,1) 51%, rgba(169,170,172,0.7791491596638656) 94%, rgba(99,100,101,0.7539390756302521) 100%);
-  background: linear-gradient(180deg, rgba(239,239,242,1) 51%, rgba(169,170,172,0.7791491596638656) 94%, rgba(99,100,101,0.7539390756302521) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efeff2",endColorstr="#636465",GradientType=1);
+  background: rgb(239, 239, 242);
+  background: -moz-linear-gradient(180deg, rgba(239, 239, 242, 1) 51%, rgba(169, 170, 172, 0.78) 94%, rgba(99, 100, 101, 0.7539390756302521) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(239, 239, 242, 1) 51%, rgba(169, 170, 172, 0.7791491596638656) 94%, rgba(99, 100, 101, 0.7539390756302521) 100%);
+  background: linear-gradient(180deg, rgba(239, 239, 242, 1) 51%, rgba(169, 170, 172, 0.7791491596638656) 94%, rgba(99, 100, 101, 0.7539390756302521) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efeff2", endColorstr="#636465", GradientType=1);
   width: 100%;
-
 }
 
 /* Next & previous buttons */
@@ -208,8 +150,7 @@ $colorBlack: black;
   height: 100%;
   width: 50%;
   margin-left: 1%;
-  margin-top:-20%;
-
+  margin-top: -20%;
 }
 
 .mySlides-text {
@@ -219,21 +160,24 @@ $colorBlack: black;
   display: inline-block;
   text-align: center;
   margin-right: 5%;
+
   h2 {
     margin-top: 17%;
     font-size: 2.5rem;
     text-transform: uppercase;
   }
+
   span {
     color: $colorMain;
   }
+
   p {
     display: inline-block;
     font-size: 1.3rem;
     margin-bottom: 5%;
   }
-  a {
 
+  a {
     padding: 1rem;
     text-transform: uppercase;
     cursor: pointer;
@@ -245,12 +189,239 @@ $colorBlack: black;
     background-color: $colorMain;
     border-radius: 10px;
     font-size: 2rem;
+
     &:hover {
       text-decoration: none;
       color: $colorBlack;
     }
+
     &:visited {
       text-decoration: none;
     }
+  }
+}
+
+// Products
+
+.products-container {
+  display: flex;
+  width: 98%;
+  height: 15rem;
+  margin: 0 0 1% 1%;
+  padding: 1%;
+
+  .products-item {
+    height: 100%;
+    width: 33%;
+    background-image: url("../images/box1_img.jpg");
+    background-position: center;
+    background-size: cover;
+
+    &:nth-child(2) {
+      background-image: url("../images/box2_img.jpg");
+    }
+
+    .product-info {
+      margin: 43% 0 0 0;
+      text-align: left;
+      height: 20%;
+      background-color: $colorWhiteOp;
+
+      div {
+        height: 1%;
+        width: 50%;
+        border: 5px $colorMain solid;
+        margin-left: 5%;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        margin-left: 5%;
+      }
+    }
+  }
+
+  .products-text {
+    width: 30%;
+    height: 100%;
+    border: 2px solid #636465;
+
+    h4 {
+      font-size: 1.2rem;
+      margin: 3% 0 -2% 5%;
+      color: $colorBlack;
+    }
+
+    .product-info {
+
+      div {
+        display: inline-block;
+        height: 1%;
+        width: 55%;
+        border: 5px $colorMain solid;
+        margin-left: 5%;
+      }
+
+      p {
+        color: #636465;
+        width: 90%;
+        margin-left: 5%;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+// Prices
+
+.prices {
+  padding-top: 2.5%;
+
+  h3 {
+    margin-left: 2.5%;
+    color: $colorBlack;
+    text-transform: uppercase;
+  }
+
+  .underline-bar {
+    display: inline-block;
+    height: 1%;
+    width: 31%;
+    border: 5px $colorMain solid;
+    margin-left: 1.25%;
+  }
+}
+
+.prices {
+  background-color: #E2E3E5;
+  padding-top: 2%;
+}
+
+.plans-container {
+  display: flex;
+  margin-top: 2%;
+}
+
+.plan {
+  height: 31rem;
+  width: 31%;
+  text-align: center;
+  margin-top: -2rem;
+
+  .outer-circle {
+    background-color: $colorWhite;
+    z-index: 10;
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 2px solid $greyText;
+    padding: 0.9rem 0.9rem 0.9rem 0.85rem;
+
+    .inner-circle {
+      z-index: 10;
+      position: relative;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      border: 1px solid $greyText;
+      background-color: $greyText;
+    }
+  }
+
+  .plan-info {
+    border: 2px solid $greyText;
+    position: relative;
+    z-index: 1;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    background-color: $colorWhiteOpper;
+
+    h4 {
+      text-transform: uppercase;
+      margin-bottom: 1.3rem;
+    }
+
+    .price-circle {
+      width: 30%;
+      height: 6.5rem;
+      border: 3px solid $greyText;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      padding-top: 0.9rem;
+      color: $greyText;
+
+      p:first-child {
+        margin-bottom: 0;
+        font-size: 2rem;
+
+        sup {
+          font-size: 1rem;
+          top: -1rem;
+        }
+      }
+
+      p:last-child {
+        margin-top: -0.5rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.plan-details {
+  p {
+    padding: 0.2rem;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+  }
+
+  p:nth-child(1) {
+    background-color: $colorGrey;
+    color: $greyText;
+  }
+
+  p:nth-child(2) {
+    background-color: $lightGrey;
+    color: $greyText;
+  }
+
+  p:nth-child(3) {
+    background-color: $colorGrey;
+    color: $greyText;
+  }
+
+  p:last-child {
+    background-color: $lightGrey;
+    color: $greyText;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.plan-join {
+  color: $colorWhite;
+  background-color: $colorMain;
+  z-index: 1;
+  margin-top: 6rem;
+  padding: 0.6rem 2.5rem 0.6rem 2.5rem;
+  height: 3rem;
+  width: 50%;
+  text-transform: uppercase;
+  border: 1px solid $colorMain;
+  font-size: 1.3rem;
+  text-decoration: none;
+  border-radius: 1rem;
+
+  &:hover {
+    color: $colorBlack;
+    text-decoration: none;
+  }
+}
+
+.basic-plan, .standard-plan, .advance-plan {
+  .outer-circle {
+    top: 6%;
+    left: 0;
   }
 }
