@@ -2,7 +2,7 @@ $colorMain: #06c787;
 $colorWhite: #ffffff;
 $colorWhiteOp: rgba(255, 255, 255, 0.3);
 $colorWhiteOpper: rgba(255, 255, 255, 0.5);
-$colorBlack: black;
+$colorBlack: rgb(52, 58, 64);
 $lightGrey: rgb(230, 230, 230);
 $colorGrey: rgb(217, 217, 217);
 $greyText: rgb(102, 102, 102);
@@ -20,13 +20,15 @@ $greyText: rgb(102, 102, 102);
 // Navigation
 
 .navigation-row {
+  display: flex;
+  align-items: flex-start;
   background-color: $colorBlack;
   width: 100%;
-  height: 4rem;
-  padding: 0.4rem;
+  height: 3.5rem;
+  padding: 0.25rem;
 
   .navigation-logo {
-    display: inline-block;
+    //display: inline-block;
     margin-left: 5%;
     margin-right: 30%;
     width: 25%;
@@ -34,8 +36,12 @@ $greyText: rgb(102, 102, 102);
     font-size: 2rem;
     color: $colorWhite;
 
+
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
+      margin-bottom: 0;
+
+
     }
 
     span {
@@ -46,9 +52,17 @@ $greyText: rgb(102, 102, 102);
 }
 
 .navigation-container {
-  display: inline-block;
+  //display: inline-block;
   margin-right: 5%;
-  margin-bottom: 1rem;
+  //padding: 0.5rem;
+  //margin-bottom: 1rem;
+}
+
+.btn-group {
+  vertical-align: baseline !important;
+  select {
+    background-color: $colorBlack;
+  }
 }
 
 .btn {
@@ -56,12 +70,26 @@ $greyText: rgb(102, 102, 102);
 
   &:hover {
     color: $colorMain !important;
+    background-color: $colorBlack !important;
+    border: none;
+    font-weight: bolder;
   }
 
 }
 
+.dropdown-menu {
+  background-color: $colorBlack !important;
+}
+
 .dropdown-item {
   text-transform: capitalize;
+  color: $colorWhite !important;
+  &:hover {
+    background-color: transparent !important;
+    color: $colorMain !important;
+    font-weight: bolder;
+  }
+
 }
 
 
@@ -78,13 +106,35 @@ $greyText: rgb(102, 102, 102);
 /* Hide the images by default */
 .mySlides {
   display: none;
-  height: 30rem;
+  height: 24rem;
   background: rgb(239, 239, 242);
   background: -moz-linear-gradient(180deg, rgba(239, 239, 242, 1) 51%, rgba(169, 170, 172, 0.78) 94%, rgba(99, 100, 101, 0.7539390756302521) 100%);
   background: -webkit-linear-gradient(180deg, rgba(239, 239, 242, 1) 51%, rgba(169, 170, 172, 0.7791491596638656) 94%, rgba(99, 100, 101, 0.7539390756302521) 100%);
   background: linear-gradient(180deg, rgba(239, 239, 242, 1) 51%, rgba(169, 170, 172, 0.7791491596638656) 94%, rgba(99, 100, 101, 0.7539390756302521) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efeff2", endColorstr="#636465", GradientType=1);
   width: 100%;
+
+  .black-chair {
+    background-image: url("/images/black_chair.png");
+    //background-size: initial;
+    bottom: 5%;
+  }
+
+  .orange-chair {
+    background-image: url("/images/orange_chair.png");
+    background-size: 86%;
+    bottom: 10%;
+
+  }
+
+  .red-chair {
+    background-image: url("/images/red_chair.png");
+    background-size: 80%;
+    bottom: 15%;
+
+
+  }
+
 }
 
 /* Next & previous buttons */
@@ -95,7 +145,6 @@ $greyText: rgb(102, 102, 102);
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: $colorMain;
   font-weight: bold;
   font-size: 2.5rem;
   transition: 0.6s ease;
@@ -148,22 +197,31 @@ $greyText: rgb(102, 102, 102);
 
 .mySlides-image {
   height: 100%;
-  width: 50%;
-  margin-left: 1%;
-  margin-top: -20%;
+  width: 40%;
+  margin-left: 5%;
+  margin-top: 0;
+  display: inline-block;
+  // background-image: url("/images/black_chair.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  // background-size: contain;
+  position: relative;
+  // bottom: 15%;
 }
 
 .mySlides-text {
-
+  position: relative;
   height: 100%;
   max-width: 39%;
   display: inline-block;
   text-align: center;
   margin-right: 5%;
+  margin-left: 2%;
+  top: -30%;
 
   h2 {
-    margin-top: 17%;
-    font-size: 2.5rem;
+    margin-top: 1%;
+    font-size: 2rem;
     text-transform: uppercase;
   }
 
@@ -173,7 +231,7 @@ $greyText: rgb(102, 102, 102);
 
   p {
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 5%;
   }
 
@@ -188,11 +246,12 @@ $greyText: rgb(102, 102, 102);
     color: $colorWhite;
     background-color: $colorMain;
     border-radius: 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
 
     &:hover {
       text-decoration: none;
       color: $colorBlack;
+      font-weight: bolder;
     }
 
     &:visited {
@@ -276,7 +335,8 @@ $greyText: rgb(102, 102, 102);
 // Prices
 
 .prices {
-  padding-top: 2.5%;
+  padding-top: 2%;
+  background-color: #E2E3E5;
 
   h3 {
     margin-left: 2.5%;
@@ -293,10 +353,6 @@ $greyText: rgb(102, 102, 102);
   }
 }
 
-.prices {
-  background-color: #E2E3E5;
-  padding-top: 2%;
-}
 
 .plans-container {
   display: flex;
@@ -308,6 +364,37 @@ $greyText: rgb(102, 102, 102);
   width: 31%;
   text-align: center;
   margin-top: -2rem;
+
+  &:hover {
+    .outer-circle {
+      background-color: $colorMain;
+      border: 2px solid $colorMain;
+      .inner-circle {
+        background-color: $colorWhite;
+        border: 2px solid $colorWhite;
+      }
+    }
+    .plan-info {
+      background-color: $colorMain;
+      h4 {
+        color: $colorWhite;
+        font-weight: bolder;
+      }
+      .price-circle{
+        background-color: $colorWhite;
+        border: 3px solid $colorMain;
+      }
+      .plan-join {
+        background-color: $colorWhite;
+        color: $colorMain;
+        &:hover {
+          background-color: $colorBlack;
+          color: $colorWhite;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
 
   .outer-circle {
     background-color: $colorWhite;
@@ -338,9 +425,11 @@ $greyText: rgb(102, 102, 102);
     padding-bottom: 1.5rem;
     background-color: $colorWhiteOpper;
 
+
     h4 {
       text-transform: uppercase;
       margin-bottom: 1.3rem;
+      color: $colorMain;
     }
 
     .price-circle {
@@ -368,7 +457,8 @@ $greyText: rgb(102, 102, 102);
       }
     }
   }
-}
+
+
 
 .plan-details {
   p {
@@ -414,14 +504,159 @@ $greyText: rgb(102, 102, 102);
   border-radius: 1rem;
 
   &:hover {
-    color: $colorBlack;
+    //color: $colorBlack;
     text-decoration: none;
   }
-}
+}}
 
 .basic-plan, .standard-plan, .advance-plan {
   .outer-circle {
     top: 6%;
     left: 0;
+  }
+}
+
+.basic-plan {
+  .plan-details {
+    p:nth-child(3){
+      visibility: hidden;
+
+    }
+    p:last-child {
+      visibility: hidden;
+    }
+  }
+}
+
+.standard-plan {
+  .plan-details {
+    p:last-child{
+      visibility: hidden;
+    }
+  }
+}
+
+.contact {
+  padding-top: 2%;
+
+  h3 {
+    margin-left: 2.5%;
+    color: $colorBlack;
+    text-transform: uppercase;
+  }
+
+  .underline-bar {
+    display: inline-block;
+    height: 1%;
+    width: 31%;
+    border: 5px $colorMain solid;
+    margin-left: 1.25%;
+  }
+}
+
+.contact-form {
+  padding: 2rem;
+
+  input {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: 1px solid $colorMain;
+
+  }
+
+  textarea {
+    border: 1px solid $colorMain;
+  }
+
+  input:first-child {
+    margin-top: 0;
+  }
+
+  input:nth-child(2) {
+    margin-bottom: 0;
+  }
+
+  small {
+    margin-bottom: 1rem;
+  }
+
+  .col-md-4 {
+    margin-left: 5rem;
+    align-items: center;
+
+  }
+
+  .form-checked {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+
+    img {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    p {
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  #redChair {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    width: 90%;
+    background-color: $colorMain !important;
+    border: none;
+    &:hover {
+      color: $colorBlack !important;
+      font-weight: bolder;
+    }
+  }
+}
+
+footer {
+  padding-bottom: 1rem;
+  color: $greyText;
+  .footer-container {
+    display: flex;
+    font-size: 1.5rem;
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    .footer-left {
+      text-transform: capitalize;
+      margin-left: 2.5%;
+      margin-top: 0.15rem;
+    }
+
+    .footer-right {
+      display: flex;
+      margin-left: 4%;
+      flex-wrap: nowrap;
+      width: 40%;
+
+      .footer-right-icons {
+        margin-right: 0;
+        font-size: 1.6rem;
+
+      }
+
+      .footer-right-info {
+        margin-top: 0.15rem;
+        margin-left: 4%;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        font-size: 1.75rem;
+
+        span {
+          font-weight: bolder;
+        }
+      }
+    }
   }
 }

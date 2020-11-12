@@ -35,7 +35,7 @@
                 <div class="btn-group btn-group-lg" role="group" aria-label="Button group with nested dropdown">
 
                     <div class="btn-group btn-group-lg" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                        <button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             o firmie
                         </button>
@@ -45,8 +45,8 @@
                             <a class="dropdown-item" href="#">historia</a>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-secondary">galeria</button>
-                    <button type="button" class="btn btn-secondary">kontakt</button>
+                    <button type="button" class="btn btn-dark">galeria</button>
+                    <button type="button" class="btn btn-dark">kontakt</button>
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
     <section class="slider">
         <div class="slideshow-container">
             <div class="mySlides">
-                <img class="mySlides-image" src="images/black_chair.png">
+                <div class="mySlides-image black-chair"></div>
                 <div class="mySlides-text">
                     <h2>sit <span>on</span> our <span>chair</span></h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -66,11 +66,27 @@
             </div>
 
             <div class="mySlides">
-
+                <div class="mySlides-image orange-chair"></div>
+                <div class="mySlides-text">
+                    <h2>sit <span>on</span> our <span>chair</span></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Leo a diam sollicitudin tempor id. Feugiat vivamus at augue eget arcu
+                        dictum.</p>
+                    <a href="#">Zobacz wiecej</a>
+                </div>
             </div>
 
             <div class="mySlides">
-
+                <div class="mySlides-image red-chair"></div>
+                <div class="mySlides-text">
+                    <h2>sit <span>on</span> our <span>chair</span></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Leo a diam sollicitudin tempor id. Feugiat vivamus at augue eget arcu
+                        dictum.</p>
+                    <a href="#">Zobacz wiecej</a>
+                </div>
             </div>
             <a class="prev">&#10094;</a>
             <a class="next">&#10095;</a>
@@ -141,9 +157,9 @@
                     </div>
                 </div>
                 <div class="plan-info">
-                    <h4>basic plan</h4>
+                    <h4>standard plan</h4>
                     <div class="price-circle">
-                        <p>85<sup>99</sup></p>
+                        <p>95<sup>99</sup></p>
                         <p>pln&#47;msc</p>
                     </div>
                     <div class="plan-details">
@@ -161,9 +177,9 @@
                     </div>
                 </div>
                 <div class="plan-info">
-                    <h4>basic plan</h4>
+                    <h4>advance plan</h4>
                     <div class="price-circle">
-                        <p>85<sup>99</sup></p>
+                        <p>210<sup>99</sup></p>
                         <p>pln&#47;msc</p>
 
                     </div>
@@ -181,9 +197,50 @@
     </section>
     <section class="contact">
 
+        <h3>Kontakt</h3>
+        <div class="underline-bar"></div>
+
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group col-md-7">
+                            <input type="text" class="form-control form-control-lg" id="userName" placeholder="Imię">
+                            <input type="email" class="form-control form-control-lg" id="userEmail" aria-describedby="emailHelp" placeholder="email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <textarea class="form-control form-control-lg" id="userMessage" rows="6" placeholder="Wiadomość"></textarea>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <img src="images/red_chair.png" alt="red chair" id="redChair">
+                            <div class="form-checked">
+                                <img src="images/form_ok.jpg">
+                                <p>Zgadzam się na przetwarzanie <br> danych osobowych</p>
+                            </div>
+                            <button type="submit" class="btn btn-lg btn-primary">wyślij</button>
+                        </div>
+                    </div>
+
+
+
+                </form>
+
     </section>
     <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="footer-left-info">
+                    copyright 9999 &#x0007C; all rights reserved - sit on chair
+                </p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-right-icons">
+                    <img src="images/flickr.png">
+                    <img src="images/pinterest.png">
+                    <img src="images/vimeo.png">
+                    <img src="images/twitter.png">
 
+                </div>
+                <p class="footer-right-info">sit <span>on</span> chair</p>
+            </div>
+        </div>
     </footer>
 </div>
 
